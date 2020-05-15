@@ -228,3 +228,5 @@ document.addEventListener('DOMContentLoaded', () => {
       ui.cartLogic();
     });
 });
+
+//Finished project so far
