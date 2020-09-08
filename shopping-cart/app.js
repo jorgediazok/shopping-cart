@@ -1,3 +1,10 @@
+// @ts-ignore
+const client = contentful.createClient({
+  space: '5tgzqrr3gegh',
+  accessToken: 'FwH1kAvPrYm12_0ChIjh-ae2cu9gWwb1IhlN-nZGQuk',
+  host: 'preview.contentful.com',
+});
+
 //variables
 
 const cartBtn = document.querySelector('.cart-btn');
@@ -19,9 +26,11 @@ let buttonsDOM = [];
 class Products {
   async getProducts() {
     try {
-      let result = await fetch('products.json');
-      let data = await result.json();
-      let products = data.items;
+      let contentful = await client.getEntries({
+        content_type: 'shoppingCartOne',
+      });
+      let products = contentful.items;
+      console.log(products);
       products = products.map((item) => {
         const { title, price } = item.fields;
         const { id } = item.sys;
@@ -29,7 +38,7 @@ class Products {
         return { title, price, id, image };
       });
       return products;
-    } catch {
+    } catch (error) {
       console.log(error);
     }
   }
@@ -38,7 +47,6 @@ class Products {
 //display product
 class UI {
   displayProducts(products) {
-    console.log(products);
     let result = '';
     products.forEach((product) => {
       result += `<!--single product-->
