@@ -50,8 +50,8 @@ class Products {
 //display product
 class UI {
   displayProducts(products) {
-    const products1 = products.slice(0, 8);
-    const products2 = products.slice(3, 8);
+    const products1 = products.slice(8, 17);
+    const products2 = products.slice(0, 8);
     let result = '';
     let result2 = '';
     products1.forEach((product) => {
