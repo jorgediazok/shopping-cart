@@ -32,6 +32,29 @@ class Products {
         content_type: 'shoppingCartOne',
       });
       let products = contentful.items;
+      console.log(products);
+      products = products.map((item) => {
+        const { title, price } = item.fields;
+        const { id } = item.sys;
+        const image = item.fields.image.fields.file.url;
+        return { title, price, id, image };
+      });
+      return products;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
+
+class Games {
+  async getProducts() {
+    try {
+      let contentful = await client.getEntries({
+        content_type: 'shoppingCartTwo',
+      });
+      console.log(contentful);
+      let products = contentful.items;
+      console.log(products);
       products = products.map((item) => {
         const { title, price } = item.fields;
         const { id } = item.sys;
