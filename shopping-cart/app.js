@@ -18,6 +18,7 @@ const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
 const productsDOM = document.querySelector('.products-center');
+const productsDOM2 = document.querySelector('.products-center2');
 
 //cart
 let cart = [];
@@ -89,6 +90,7 @@ class UI {
       <!--End of Single Product-->`;
     });
     productsDOM.innerHTML = result;
+    productsDOM2.innerHTML = result;
   }
   getBagButtons() {
     const buttons = [...document.querySelectorAll('.bag-btn')]; //Turns it into an array
