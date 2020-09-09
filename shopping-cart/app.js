@@ -1,4 +1,6 @@
 // @ts-ignore
+
+//Contentful Database
 const client = contentful.createClient({
   space: '5tgzqrr3gegh',
   accessToken: 'FwH1kAvPrYm12_0ChIjh-ae2cu9gWwb1IhlN-nZGQuk',
@@ -30,7 +32,6 @@ class Products {
         content_type: 'shoppingCartOne',
       });
       let products = contentful.items;
-      console.log(products);
       products = products.map((item) => {
         const { title, price } = item.fields;
         const { id } = item.sys;
@@ -236,6 +237,3 @@ document.addEventListener('DOMContentLoaded', () => {
       ui.cartLogic();
     });
 });
-
-//Finished project so far
-//Finished again
