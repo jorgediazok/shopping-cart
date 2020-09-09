@@ -85,7 +85,7 @@ body {
   font-size: 3.4rem;
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
-  margin-bottom: 3rem;
+  margin-bottom: 1.2rem;
 }
 .banner-btn {
   padding: 1rem 3rem;
@@ -101,6 +101,10 @@ body {
 .banner-btn:hover {
   background: transparent;
   color: var(--primaryColor);
+}
+
+.hero-image {
+  height: 100px;
 }
 /* --------------- End of Hero ---------------- */
 /* --------------- Products ---------------- */
