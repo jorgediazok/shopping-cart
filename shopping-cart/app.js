@@ -47,34 +47,15 @@ class Products {
   }
 }
 
-class Games {
-  async getProducts() {
-    try {
-      let contentful = await client.getEntries({
-        content_type: 'shoppingCartTwo',
-      });
-      console.log(contentful);
-      let products = contentful.items;
-      console.log(products);
-      products = products.map((item) => {
-        const { title, price } = item.fields;
-        const { id } = item.sys;
-        const image = item.fields.image.fields.file.url;
-        return { title, price, id, image };
-      });
-      return products;
-    } catch (error) {
-      console.log(error);
-    }
-  }
-}
-
 //display product
 class UI {
   displayProducts(products) {
+    const products1 = products.slice(0, 8);
+    const products2 = products.slice(3, 8);
     let result = '';
-    products.forEach((product) => {
-      result += `<!--single product-->
+    let result2 = '';
+    products1.forEach((product) => {
+      result += `
       <article class="product">
         <div class="img-container">
           <img src=${product.image} alt="product" class="product-img">
@@ -87,10 +68,26 @@ class UI {
         <h3>${product.title}</h3>
         <h4>${product.price}</h4>
       </article>
-      <!--End of Single Product-->`;
+      `;
+    });
+    products2.forEach((product2) => {
+      result2 += `
+      <article class="product">
+        <div class="img-container">
+          <img src=${product2.image} alt="product" class="product-img">
+          <button class="bag-btn" data-id=${product2.id}>
+            <i class="fas fa-shopping-cart">
+              add to cart
+            </i>
+          </button>
+        </div>
+        <h3>${product2.title}</h3>
+        <h4>${product2.price}</h4>
+      </article>
+      `;
     });
     productsDOM.innerHTML = result;
-    productsDOM2.innerHTML = result;
+    productsDOM2.innerHTML = result2;
   }
   getBagButtons() {
     const buttons = [...document.querySelectorAll('.bag-btn')]; //Turns it into an array

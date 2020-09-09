@@ -58,7 +58,7 @@ body {
 
 .logo-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   background: #f2ede9;
 }
 
@@ -70,7 +70,7 @@ body {
 /* --------------- Hero ---------------- */
 .hero {
   min-height: calc(100vh - 60px);
-  background: url('./images/product-10.jpg') center/cover no-repeat;
+  background: url('./images/product-9.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
