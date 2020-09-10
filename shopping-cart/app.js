@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-nocheck
 
 //Contentful Database
 const client = contentful.createClient({
@@ -132,9 +132,11 @@ class UI {
       });
     });
   }
+
   setCartValues(cart) {
     let tempTotal = 0;
     let itemsTotal = 0;
+
     cart.map((item) => {
       tempTotal += item.price * item.amount;
       itemsTotal += item.amount;
@@ -142,6 +144,7 @@ class UI {
     cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
     cartItems.innerText = itemsTotal;
   }
+
   addCartItem(item) {
     const div = document.createElement('div');
     div.classList.add('cart-item');

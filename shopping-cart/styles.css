@@ -19,7 +19,7 @@ body {
   background: var(--mainWhite);
   font-family: 'Lato', sans-serif;
 }
-/* --------------- Navbar ---------------- */
+/* --------------- Navbar & Sidebar---------------- */
 .navbar {
   position: sticky;
   top: 0;
@@ -54,6 +54,13 @@ body {
   top: 20px;
 }
 
+.logo-nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
 #sidebar {
   position: fixed;
   width: 200px;
@@ -75,14 +82,23 @@ body {
   border-bottom: 1px solid rgba(100, 100, 100, 0.3);
 }
 
+.signup,
+.login {
+  text-decoration: none;
+  padding: 0 20px 0 20px;
+  font-size: 20px;
+  color: #444;
+}
+
 .cart-btn {
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
   cursor: pointer;
 }
 .cart-items {
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: 16px;
+  right: 80px;
   background: var(--primaryColor);
   padding: 0 5px;
   border-radius: 30%;

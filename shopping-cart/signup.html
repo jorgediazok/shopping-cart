@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>GAMERS SHOP</title>
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <!--custom css-->
+    <link rel="stylesheet" href="./signup.css" />
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar">
+      <div class="navbar-center">
+        <span class="nav-icon">
+          <i class="fas fa-bars nav-burger"></i>
+        </span>
+        <a href="./index.html">
+          <div class="logo-nav-container">
+            <img
+              class="nav-image"
+              src="./images/1200px-Controller.svg.png"
+              alt="store logo"
+            />
+            <h1 style="color: black">GAMERS SHOP</h1>
+          </div>
+        </a>
+      </div>
+    </nav>
+    <!--Form-->
+    <form action="index.html" class="login-form">
+      <h1>SIGN UP</h1>
+      <div class="txtb">
+        <input type="text" />
+        <span data-placeholder="Username"></span>
+      </div>
+      <div class="txtb">
+        <input type="password" />
+        <span data-placeholder="Password"></span>
+      </div>
+      <input type="submit" class="logbtn" value="Sign Up" />
+      <div class="bottom-text">
+        Already have acount? <a href="./login.html">Login</a>
+      </div>
+    </form>
+    <script type="text/javascript">
+      $('.txtb input').on('focus', function () {
+        $(this).addClass('focus');
+      });
+      $('.txtb input').on('blur', function () {
+        if ($(this).val() == '') {
+          $(this).removeClass('focus');
+        }
+      });
+    </script>
+
+    <!--end of cart-->
+    <!--Contentful-->
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
