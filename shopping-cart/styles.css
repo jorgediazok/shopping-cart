@@ -42,6 +42,11 @@ body {
 .nav-icon {
   font-size: 1.5rem;
 }
+
+.nav-burger {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 .cart-btn {
   position: relative;
   cursor: pointer;

@@ -11,6 +11,7 @@ const client = contentful.createClient({
 
 const cartBtn = document.querySelector('.cart-btn');
 const bannerBtn = document.querySelector('.banner-btn');
+const navToggle = document.querySelector('.nav-burger');
 const closeCartBtn = document.querySelector('.close-cart');
 const clearCartBtn = document.querySelector('.clear-cart');
 const cartDOM = document.querySelector('.cart');
@@ -27,6 +28,11 @@ bannerBtn.addEventListener('click', function () {
     top: 837,
     behavior: 'smooth',
   });
+});
+
+//Toggle
+navToggle.addEventListener('click', function () {
+  document.getElementById('sidebar').classList.toggle('active');
 });
 
 //cart
