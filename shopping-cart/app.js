@@ -10,6 +10,7 @@ const client = contentful.createClient({
 //variables
 
 const cartBtn = document.querySelector('.cart-btn');
+const bannerBtn = document.querySelector('.banner-btn');
 const closeCartBtn = document.querySelector('.close-cart');
 const clearCartBtn = document.querySelector('.clear-cart');
 const cartDOM = document.querySelector('.cart');
@@ -19,6 +20,14 @@ const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
 const productsDOM = document.querySelector('.products-center');
 const productsDOM2 = document.querySelector('.products-center2');
+
+//Scroll to
+bannerBtn.addEventListener('click', function () {
+  window.scroll({
+    top: 837,
+    behavior: 'smooth',
+  });
+});
 
 //cart
 let cart = [];
