@@ -8,12 +8,6 @@ require('dotenv').config();
 require('./database');
 const userRoutes = require('./routes/user');
 
-app.use((req, res, next) => {
-  res.status(200).json({
-    message: 'It Works',
-  });
-});
-
 //Middlewares
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
