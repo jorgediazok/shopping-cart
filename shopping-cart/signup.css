@@ -165,3 +165,13 @@ a {
   text-align: center;
   font-size: 13px;
 }
+
+@media screen and (max-width: 900px) {
+  .login-form {
+    height: 400px;
+  }
+  .nav-image {
+    display: flex;
+    justify-content: center;
+  }
+}
