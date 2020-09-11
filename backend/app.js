@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 require('./database');
+
 const userRoutes = require('./routes/user');
 
 //Middlewares
@@ -17,6 +18,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //Routes
+app.get('/', function (req, res) {
+  res.send('The server is working ok');
+});
+
 app.use('/user', userRoutes);
 
 //Errors handlers

@@ -81,7 +81,7 @@ a {
   text-decoration: none;
 }
 
-.login-form {
+.signup-form {
   width: 360px;
   background: #f2ede9;
   height: 500px;
@@ -93,7 +93,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.login-form h1 {
+.signup-form h1 {
   text-align: center;
   margin-bottom: 60px;
 }
