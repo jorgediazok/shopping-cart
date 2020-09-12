@@ -1,14 +1,11 @@
 const loginForm = document.querySelector('.login-form');
+const button = document.querySelector('logbtn');
 
 loginForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  // @ts-ignore
   const email = document.getElementById('email').value;
-  // @ts-ignore
   const password = document.getElementById('password').value;
-
   const data = { email, password };
-  console.log(data);
 
   fetch('http://localhost:3000/user/login', {
     method: 'post',
@@ -19,9 +16,19 @@ loginForm.addEventListener('submit', function (e) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log('Success:', data);
+      console.log('success:', data);
+      if (data.token) {
+        window.location.href = 'index.html';
+      } else {
+        toastr.error('Wrong Credentials. Please try again');
+        toastr.options.closeButton = true;
+      }
     })
     .catch((error) => {
       console.error('Error:', error);
     });
+});
+
+button.addEventListener('click', function () {
+  toastr.success('Have fun storming the castle!', 'Miracle Max Says');
 });
