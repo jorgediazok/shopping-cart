@@ -23,7 +23,13 @@ signupForm.addEventListener('submit', function (e) {
       console.log('Success:', data);
       if (data.message == 'User Created') {
         // @ts-ignore
-        toastr.success('User Created. Please Login');
+        signupForm.reset();
+        toastr.success('User Created.');
+        toastr.options = {
+          onHidden: function () {
+            window.location.href = 'index.html';
+          },
+        };
       } else {
         // @ts-ignore
         toastr.error('Invalid User');
