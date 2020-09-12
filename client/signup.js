@@ -20,6 +20,13 @@ signupForm.addEventListener('submit', function (e) {
     .then((response) => response.json())
     .then((data) => {
       console.log('Success:', data);
+      if (data.message == 'User Created') {
+        toastr.success('OK');
+        window.location.href = 'login.html';
+      } else {
+        toastr.error('Invalid User');
+        toastr.options.closeButton = true;
+      }
     })
     .catch((error) => {
       console.error('Error:', error);

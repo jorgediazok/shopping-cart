@@ -1,3 +1,4 @@
+// @ts-nocheck
 const loginForm = document.querySelector('.login-form');
 const button = document.querySelector('logbtn');
 
@@ -18,6 +19,7 @@ loginForm.addEventListener('submit', function (e) {
     .then((data) => {
       console.log('success:', data);
       if (data.token) {
+        toastr.success('Logged In');
         window.location.href = 'index.html';
       } else {
         toastr.error('Wrong Credentials. Please try again');
@@ -27,8 +29,4 @@ loginForm.addEventListener('submit', function (e) {
     .catch((error) => {
       console.error('Error:', error);
     });
-});
-
-button.addEventListener('click', function () {
-  toastr.success('Have fun storming the castle!', 'Miracle Max Says');
 });
