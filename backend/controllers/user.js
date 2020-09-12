@@ -55,6 +55,7 @@ exports.user_login = (req, res, next) => {
           message: 'Auth failed',
         });
       }
+      // @ts-ignore
       bcrypt.compare(req.body.password, user[0].password, (err, result) => {
         if (err) {
           return res.status(401).json({
@@ -64,6 +65,7 @@ exports.user_login = (req, res, next) => {
         if (result) {
           const token = jwt.sign(
             {
+              // @ts-ignore
               email: user[0].email,
               userId: user[0]._id,
             },

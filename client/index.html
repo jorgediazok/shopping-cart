@@ -11,6 +11,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
     />
+    <!--Toastr-->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css
+    "
+    />
     <!--custom css-->
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -21,6 +27,7 @@
         <span class="nav-icon">
           <i class="fas fa-bars nav-burger"></i>
         </span>
+        <button class="logout-btn" id="logout">Logout</button>
         <div class="logo-nav-container">
           <img
             class="nav-image"
@@ -153,7 +160,7 @@
           <p>Enter your Email to get our news and updates.</p>
           <form class="newsletter-form">
             <input type="text" class="txtb" placeholder="Enter Your Email" />
-            <input type="submit" class="btn" value="submit" />
+            <input type="submit" class="btn btn-newsletter" value="submit" />
           </form>
         </div>
       </div>
@@ -176,8 +183,9 @@
     </div>
     <!--end of cart-->
     <!--Contentful-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
-
+    <!--Toastr-->
     <script src="app.js"></script>
   </body>
 </html>

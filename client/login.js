@@ -1,6 +1,7 @@
 // @ts-nocheck
 const loginForm = document.querySelector('.login-form');
 const button = document.querySelector('logbtn');
+const logoutBtn = document.querySelector('logout-btn');
 
 loginForm.addEventListener('submit', function (e) {
   e.preventDefault();

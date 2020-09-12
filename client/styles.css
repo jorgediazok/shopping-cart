@@ -61,6 +61,30 @@ body {
   margin-left: 10px;
 }
 
+.logout-btn {
+  display: none;
+  border: none;
+  background: #f09d51;
+  cursor: pointer;
+  color: #222;
+  font-size: 1rem;
+  letter-spacing: var(--mainSpacing);
+  height: 40px;
+  width: 90px;
+  text-transform: uppercase;
+  transition: var(--mainTransition);
+  border: 1px solid var(--primaryColor);
+}
+
+.logout-btn:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
+.logout-btn.active {
+  display: inline-block;
+}
+
 #sidebar {
   position: fixed;
   width: 200px;
@@ -103,11 +127,7 @@ body {
 }
 
 /*CART*/
-.cart-btn {
-  display: flex;
-  justify-content: flex-end;
-  cursor: pointer;
-}
+
 .cart-items {
   position: absolute;
   top: 16px;

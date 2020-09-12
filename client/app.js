@@ -22,6 +22,9 @@ const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
 const productsDOM = document.querySelector('.products-center');
 const productsDOM2 = document.querySelector('.products-center2');
+const logoutBtn = document.querySelector('.logout-btn');
+const newsLetter = document.querySelector('.newsletter-form');
+const btnNewsletter = document.querySelector('.btn-newsletter');
 
 //Scroll to
 bannerBtn.addEventListener('click', function () {
@@ -39,6 +42,13 @@ bannerBtnBuy.addEventListener('click', function () {
 //Toggle
 navToggle.addEventListener('click', function () {
   document.getElementById('sidebar').classList.toggle('active');
+});
+
+//newsletter
+btnNewsletter.addEventListener('click', function (e) {
+  e.preventDefault();
+  toastr.success('Thanks for subscribing');
+  newsLetter.reset();
 });
 
 //cart
