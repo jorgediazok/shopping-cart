@@ -1,3 +1,4 @@
+// @ts-nocheck
 const signupForm = document.querySelector('.signup-form');
 
 signupForm.addEventListener('submit', function (e) {
@@ -21,9 +22,10 @@ signupForm.addEventListener('submit', function (e) {
     .then((data) => {
       console.log('Success:', data);
       if (data.message == 'User Created') {
-        toastr.success('OK');
-        window.location.href = 'login.html';
+        // @ts-ignore
+        toastr.success('User Created. Please Login');
       } else {
+        // @ts-ignore
         toastr.error('Invalid User');
         toastr.options.closeButton = true;
       }
