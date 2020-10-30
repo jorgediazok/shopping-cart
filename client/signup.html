@@ -23,33 +23,26 @@
   <body>
     <!--Navbar-->
     <nav class="navbar">
-      <div class="navbar-center">
-        <span class="nav-icon">
-          <i class="fas fa-bars nav-burger"></i>
-        </span>
+      <div class="logo-nav-container">
         <a href="./index.html">
-          <div class="logo-nav-container">
-            <img
-              class="nav-image"
-              src="./images/1200px-Controller.svg.png"
-              alt="store logo"
-            />
-            <h1 style="color: black">GAMERS SHOP</h1>
-          </div>
+          <img
+            class="logo-nav-image"
+            src="./images/1200px-Controller.svg.png"
+            alt="store logo"
+          />
+          <h1 class="nav-image-title">GAMERS SHOP</h1>
         </a>
       </div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
     </nav>
 
     <!--Toggle Sidebar-->
     <div id="sidebar">
       <ul>
-        <li>
-          <img
-            class="nav-image"
-            src="./images/1200px-Controller.svg.png"
-            alt="store logo"
-          />
-        </li>
         <li><a class="home" href="./index.html">Home</a></li>
         <li><a class="login" href="./login.html">Login</a></li>
       </ul>
@@ -86,7 +79,9 @@
 
     <!--Scripts-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <script src="form.js"></script>
+    <script src="./form.js"></script>
     <script src="./signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>

@@ -15,43 +15,99 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-a {
+li {
   text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
 }
 
 /* --------------- Navbar & Sidebar---------------- */
 .navbar {
   position: sticky;
   top: 0;
-  height: 60px;
+  height: 70px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  background: #f2ede9;
-  z-index: 1;
-}
-.navbar-center {
-  width: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.5rem;
+  background: #f2ede9;
+  z-index: 1;
 }
+
+.logo-nav-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-nav-container a {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  color: black;
+}
+
+.logo-nav-image {
+  height: 80px;
+}
+
+@media (max-width: 768px) {
+  .logo-nav-image {
+    margin-top: -10px;
+  }
+  .logo-nav-container {
+    padding-left: 10px;
+  }
+  .nav-image-title {
+    font-size: 1rem;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    text-align: center;
+  }
+  .navbar-links > ul > li > a {
+    display: none;
+  }
+}
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+    margin-top: 13px;
+  }
+
+  .nav-icon {
+    position: absolute;
+    right: 80px;
+  }
+}
+
 .nav-icon {
   font-size: 1.5rem;
 }
 
 .nav-image {
   height: 80px;
-}
-
-.nav-burger {
-  font-size: 1.5rem;
-  cursor: pointer;
-  left: 230px;
-  top: 20px;
 }
 
 .logo-nav-container {
@@ -66,13 +122,13 @@ a {
   width: 200px;
   height: 100%;
   background: #f2ede9;
-  left: -200px;
+  right: -200px;
   transition: all 300ms linear;
   z-index: 1;
 }
 
 #sidebar.active {
-  left: 0;
+  right: 0;
 }
 
 #sidebar ul li {
@@ -80,6 +136,11 @@ a {
   text-align: center;
   padding: 15px 10px;
   border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+#sidebar ul li a {
+  text-decoration: none;
+  list-style: none;
 }
 
 .home,
