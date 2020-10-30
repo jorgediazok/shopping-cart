@@ -26,10 +26,15 @@ const logoutBtn = document.querySelector('.logout-btn');
 const newsLetter = document.querySelector('.newsletter-form');
 const btnNewsletter = document.querySelector('.btn-newsletter');
 
+//Toggle
+navToggle.addEventListener('click', function () {
+  document.getElementById('sidebar').classList.toggle('active');
+});
+
 //Scroll to
 bannerBtn.addEventListener('click', function () {
   window.scroll({
-    top: 837,
+    top: 910,
     behavior: 'smooth',
   });
 });
@@ -37,11 +42,6 @@ bannerBtn.addEventListener('click', function () {
 //Buy
 bannerBtnBuy.addEventListener('click', function () {
   window.location.href = 'login.html';
-});
-
-//Toggle
-navToggle.addEventListener('click', function () {
-  document.getElementById('sidebar').classList.toggle('active');
 });
 
 //newsletter
