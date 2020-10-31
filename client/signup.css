@@ -100,10 +100,10 @@ ul {
 
 #sidebar {
   position: fixed;
-  width: 200px;
-  height: 100%;
+  width: 250px;
+  height: 100vh;
   background: #f2ede9;
-  right: -200px;
+  right: -250px;
   transition: all 300ms linear;
   z-index: 1;
 }

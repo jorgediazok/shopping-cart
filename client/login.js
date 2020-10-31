@@ -1,13 +1,13 @@
 // @ts-nocheck
 const loginForm = document.querySelector('.login-form');
-const button = document.querySelector('logbtn');
-const logoutBtn = document.querySelector('logout-btn');
+const button = document.querySelector('.login-btn');
 
 loginForm.addEventListener('submit', function (e) {
   e.preventDefault();
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   const data = { email, password };
+  console.log(data);
 
   fetch('http://localhost:3000/user/login', {
     method: 'post',
@@ -28,6 +28,6 @@ loginForm.addEventListener('submit', function (e) {
       }
     })
     .catch((error) => {
-      console.error('Error:', error);
+      console.log('Error:', error);
     });
 });

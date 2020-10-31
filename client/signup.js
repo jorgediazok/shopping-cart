@@ -3,11 +3,8 @@ const signupForm = document.querySelector('.signup-form');
 
 signupForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  // @ts-ignore
   const email = document.getElementById('email').value;
-  // @ts-ignore
   const password = document.getElementById('password').value;
-
   const data = { email, password };
   console.log(data);
 
