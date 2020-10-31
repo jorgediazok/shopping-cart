@@ -11,7 +11,7 @@ const client = contentful.createClient({
 
 const cartBtn = document.querySelector('.cart-btn');
 const bannerBtnBuy = document.getElementById('banner-btn-buy');
-const bannerBtn = document.querySelector('.banner-btn');
+const bannerBtn = document.querySelector('.hero-banner-btn');
 const navToggle = document.querySelector('.toggle-button');
 const closeCartBtn = document.querySelector('.close-cart');
 const clearCartBtn = document.querySelector('.clear-cart');

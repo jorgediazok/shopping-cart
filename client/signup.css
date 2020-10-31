@@ -151,6 +151,11 @@ ul {
   color: #444;
 }
 
+.home:hover,
+.login:hover {
+  color: #085feb;
+}
+
 .signup-form {
   width: 360px;
   background: #f2ede9;
@@ -212,27 +217,35 @@ ul {
   width: 100%;
 }
 
-.logbtn {
+.signup-btn {
+  text-transform: uppercase;
   display: block;
   width: 100%;
   height: 50px;
   border: none;
-  background: #f09d51;
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   background-size: 200%;
   color: #fff;
   outline: none;
   cursor: pointer;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 
-.logbtn:hover {
+.signup-btn:hover {
   background-position: right;
+  color: #222;
+  font-weight: bold;
 }
 
 .bottom-text {
   margin-top: 60px;
   text-align: center;
   font-size: 13px;
+}
+
+.bottom-text-login {
+  color: #085feb;
 }
 
 @media screen and (max-width: 900px) {
