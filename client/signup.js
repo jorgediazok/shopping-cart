@@ -24,7 +24,7 @@ signupForm.addEventListener('submit', function (e) {
       if (data.message == 'User Created') {
         // @ts-ignore
         signupForm.reset();
-        toastr.success('User Created.');
+        toastr.success('User Created. Please Login.');
         toastr.options = {
           onHidden: function () {
             window.location.href = 'index.html';

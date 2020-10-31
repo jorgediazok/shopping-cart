@@ -72,6 +72,7 @@ ul {
     display: none;
   }
 }
+
 .toggle-button {
   position: absolute;
   top: 0.75rem;
@@ -93,28 +94,8 @@ ul {
 @media screen and (max-width: 768px) {
   .toggle-button {
     display: flex;
-    margin-top: 13px;
+    margin-top: 12px;
   }
-
-  .nav-icon {
-    position: absolute;
-    right: 80px;
-  }
-}
-
-.nav-icon {
-  font-size: 1.5rem;
-}
-
-.nav-image {
-  height: 80px;
-}
-
-.logo-nav-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 425px;
 }
 
 #sidebar {
@@ -148,7 +129,7 @@ ul {
   text-decoration: none;
   padding: 0 20px 0 20px;
   font-size: 20px;
-  color: #444;
+  color: #222;
 }
 
 .home:hover,
@@ -246,18 +227,4 @@ ul {
 
 .bottom-text-login {
   color: #085feb;
-}
-
-@media screen and (max-width: 900px) {
-  .signup-form {
-    height: 400px;
-    padding-top: 20px;
-  }
-  .nav-image {
-    display: flex;
-    justify-content: center;
-  }
-  .logo-nav-container {
-    margin-right: 85px;
-  }
 }
