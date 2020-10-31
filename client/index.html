@@ -22,11 +22,6 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!--
-     <button class="logout-btn" id="logout">Logout</button>
-        <div class="cart-btn">
-   -->
-
     <nav class="navbar">
       <div class="logo-nav-container">
         <img
@@ -49,8 +44,11 @@
       </a>
       <div class="navbar-links">
         <ul>
-          <li><a href="./login.html">Login</a></li>
-          <li><a href="./signup.html">Sign Up</a></li>
+          <li id="login"><a href="./login.html">Login</a></li>
+          <li id="signup"><a href="./signup.html">Sign Up</a></li>
+          <li id="logout" onclick="logout()" class="hide">
+            <a href="">Logout</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -58,8 +56,15 @@
     <!--Toggle Sidebar-->
     <div id="sidebar">
       <ul>
-        <li><a class="signup" href="./signup.html">Sign Up</a></li>
-        <li><a class="login" href="./login.html">Login</a></li>
+        <li id="sidebar-signup">
+          <a class="signup" href="./signup.html">Sign Up</a>
+        </li>
+        <li id="sidebar-login">
+          <a class="login" href="./login.html">Login</a>
+        </li>
+        <li id="sidebar-logout" onclick="logout()" class="hide">
+          <a href="">Logout</a>
+        </li>
       </ul>
     </div>
 

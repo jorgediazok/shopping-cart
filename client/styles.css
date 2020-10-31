@@ -17,6 +17,14 @@ body {
 ul {
   list-style-type: none;
 }
+
+li {
+  list-style-type: none;
+}
+
+.hide {
+  display: none;
+}
 /* --------------- Navbar & Sidebar---------------- */
 .navbar {
   position: sticky;
@@ -147,28 +155,26 @@ ul {
   border-bottom: 1px solid rgba(100, 100, 100, 0.3);
 }
 
-.logout-btn {
-  display: none;
-  border: none;
-  background: #f09d51;
-  cursor: pointer;
-  color: #222;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  height: 40px;
-  width: 90px;
-  text-transform: uppercase;
-  transition: all 0.3s linear;
-  border: 1px solid #f09d51;
+#logout {
+  text-decoration: none;
+  padding: 0 20px 0 20px;
+  font-size: 20px;
+  color: #444;
 }
 
-.logout-btn:hover {
-  background: transparent;
-  color: #f09d51;
+#logout:hover {
+  color: #085feb;
 }
 
-.logout-btn.active {
-  display: inline-block;
+#sidebar-logout a {
+  padding: 0 20px 0 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #444;
+}
+
+#sidebar-logout a:hover {
+  color: #085feb;
 }
 
 .signup,

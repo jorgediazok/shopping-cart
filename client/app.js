@@ -22,9 +22,33 @@ const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
 const productsDOM = document.querySelector('.products-center');
 const productsDOM2 = document.querySelector('.products-center2');
-const logoutBtn = document.querySelector('.logout-btn');
+const logoutBtn = document.querySelector('#logout');
+const signup = document.querySelector('#signup');
+const login = document.querySelector('#login');
+const sidebarSignup = document.querySelector('#sidebar-signup');
+const sidebarLogin = document.querySelector('#sidebar-login');
+const sidebarLogout = document.querySelector('#sidebar-logout');
 const newsLetter = document.querySelector('.newsletter-form');
 const btnNewsletter = document.querySelector('.btn-newsletter');
+
+//Hide buttons
+const user = localStorage.getItem('user');
+if (user) {
+  signup.classList.add('hide');
+  login.classList.add('hide');
+  sidebarSignup.classList.add('hide');
+  sidebarLogin.classList.add('hide');
+  sidebarLogout.classList.remove('hide');
+  logoutBtn.classList.remove('hide');
+}
+
+const logout = () => {
+  localStorage.removeItem('user', null);
+  localStorage.removeItem('cart', null);
+  signup.classList.remove('hide');
+  login.classList.remove('hide');
+  logoutBtn.classList.add('hide');
+};
 
 //Toggle
 navToggle.addEventListener('click', function () {

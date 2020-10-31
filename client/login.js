@@ -1,6 +1,9 @@
 // @ts-nocheck
 const loginForm = document.querySelector('.login-form');
-const button = document.querySelector('.login-btn');
+
+//Save user
+
+let currentUser = null;
 
 loginForm.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -20,8 +23,12 @@ loginForm.addEventListener('submit', function (e) {
     .then((data) => {
       console.log('success:', data);
       if (data.token) {
-        toastr.success('Logged In');
-        window.location.href = 'index.html';
+        const user = email;
+        if (user) {
+          localStorage.setItem('user', JSON.stringify(user));
+          toastr.success('Logged In');
+          window.location.href = 'index.html';
+        }
       } else {
         toastr.error('Wrong Credentials. Please try again');
         toastr.options.closeButton = true;
