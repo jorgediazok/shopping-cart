@@ -33,6 +33,7 @@ const btnNewsletter = document.querySelector('.btn-newsletter');
 
 //Hide buttons
 const user = localStorage.getItem('user');
+
 if (user) {
   signup.classList.add('hide');
   login.classList.add('hide');
@@ -49,6 +50,9 @@ const logout = () => {
   login.classList.remove('hide');
   logoutBtn.classList.add('hide');
 };
+
+if (!user) {
+}
 
 //Toggle
 navToggle.addEventListener('click', function () {
