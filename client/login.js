@@ -31,6 +31,7 @@ loginForm.addEventListener('submit', function (e) {
         }
       } else {
         toastr.error('Wrong Credentials. Please try again');
+        loginForm.reset();
         toastr.options.closeButton = true;
       }
     })
