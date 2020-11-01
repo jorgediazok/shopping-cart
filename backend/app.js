@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const app = express();
 const cors = require('cors');
+const router = express.Router();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -30,8 +31,8 @@ app.use(bodyParser.json());
 app.use(serveStatic(__dirname + '/client'));
 
 //Routes
-app.get('/', function (req, res) {
-  res.send('The server is working ok');
+router.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
 
 app.use('/user', userRoutes);
