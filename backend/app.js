@@ -27,7 +27,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(bodyParser.json());
-app.use(serveStatic(__dirname + '/client/dist'));
+app.use(serveStatic(__dirname + '/client'));
 
 //Routes
 app.get('/', function (req, res) {
