@@ -8,7 +8,7 @@ signupForm.addEventListener('submit', function (e) {
   const data = { email, password };
   console.log(data);
 
-  fetch('http://localhost:3000/user/signup', {
+  fetch('https://gaming-shoppingcart.herokuapp.com/user/signup', {
     method: 'post',
     headers: {
       'Content-Type': 'application/json',

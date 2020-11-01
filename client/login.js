@@ -12,7 +12,7 @@ loginForm.addEventListener('submit', function (e) {
   const data = { email, password };
   console.log(data);
 
-  fetch('http://localhost:3000/user/login', {
+  fetch('https://gaming-shoppingcart.herokuapp.com/user/login', {
     method: 'post',
     headers: {
       'Content-Type': 'application/json',
