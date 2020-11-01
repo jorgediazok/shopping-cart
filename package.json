@@ -1,10 +1,10 @@
 {
-  "name": "backend",
+  "name": "root",
   "version": "12.18.2",
-  "description": "",
+  "description": "root of the project",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node ./backend/app.js",
     "dev": "nodemon app.js"
   },
   "author": "",

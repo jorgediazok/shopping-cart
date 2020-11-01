@@ -31,8 +31,8 @@ app.use(bodyParser.json());
 app.use(serveStatic(__dirname + '/client'));
 
 //Routes
-router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', '..', 'client', 'index.html'));
+app.use('/', (req, res) => {
+  res.sendFile(path.resolve('client', 'index.html'));
 });
 
 app.use('/user', userRoutes);
