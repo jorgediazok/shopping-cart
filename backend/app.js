@@ -1,21 +1,33 @@
 const express = require('express');
+const http = require('http');
 const app = express();
 const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const path = require('path');
+const serveStatic = require('serve-static');
+
 require('dotenv').config();
 
 require('./database');
+
+//Server
+const port = process.env.PORT || 3000;
+
+const server = http.createServer(app);
+
+server.listen(port);
+
+//Routes
 
 const userRoutes = require('./routes/user');
 
 //Middlewares
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-//CORS
 app.use(cors());
+app.use(bodyParser.json());
+app.use(serveStatic(__dirname + '/client/dist'));
 
 //Routes
 app.get('/', function (req, res) {
