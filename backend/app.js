@@ -28,12 +28,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(bodyParser.json());
-app.use(serveStatic(__dirname + '/client'));
-
-//Routes
-app.use('/', (req, res) => {
-  res.sendFile(path.resolve('client', 'index.html'));
-});
+app.use(serveStatic(path.join(__dirname, '..', '/client')));
 
 app.use('/user', userRoutes);
 
